@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "2010 Census for U.S."
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 223553265, label: "white"},
+			{y: 38929319, label: "black/african american"},
+			{y: 2932248, label: "american indian/alaska native"},
+			{y: 540013, label: "native hawaiian/pacific islander"},
+			{y: 10107368, label: "other"},
+      {y: 9009073, label: "Multiracial"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
